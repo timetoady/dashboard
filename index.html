@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="clockBlock">
+      <div id="clock" class="clock">--:--</div>
+      <div id="date" class="date">---</div>
+    </div>
+    <div class="hint">Tap a tile • Long-press on tablet to exit kiosk (later)</div>
+  </header>
+
+  <main class="grid">
+    <a class="tile" href="intent://#Intent;package=com.google.android.calendar;end">
+      <div class="label">Calendar</div>
+    </a>
+
+    <a class="tile" href="intent://#Intent;package=com.google.android.apps.meetings;end">
+      <div class="label">Meet</div>
+    </a>
+
+    <a class="tile" href="intent://#Intent;package=com.google.android.apps.chromecast.app;end">
+      <div class="label">Home</div>
+    </a>
+
+    <a class="tile" href="intent://#Intent;package=org.videolan.vlc;end">
+      <div class="label">VLC</div>
+    </a>
+
+    <a class="tile" href="intent://#Intent;package=com.google.android.apps.messaging;end">
+      <div class="label">Messages</div>
+    </a>
+
+    <a class="tile" href="intent://#Intent;package=com.google.android.youtube;end">
+      <div class="label">YouTube</div>
+    </a>
+
+    <a class="tile" href="intent://#Intent;package=com.google.android.youtube.tv;end">
+      <div class="label">YouTube TV</div>
+    </a>
+
+    <a class="tile" href="intent://#Intent;package=com.google.android.googlequicksearchbox;end">
+      <div class="label">Assistant</div>
+      <div class="sub">Google App</div>
+    </a>
+
+    <a class="tile secondary" href="#" id="refreshTile">
+      <div class="label">Refresh</div>
+      <div class="sub">Reload dashboard</div>
+    </a>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

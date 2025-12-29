@@ -1,0 +1,86 @@
+:root{
+  --bg: #0b0f1a;
+  --panel: #0f1629;
+  --panel2: #0c1324;
+  --text: #ffffff;
+  --muted: rgba(255,255,255,.70);
+  --accent: #4169e1; /* royal blue */
+  --outline: rgba(65,105,225,.35);
+}
+
+*{ box-sizing: border-box; }
+html, body { height: 100%; }
+
+body{
+  margin: 0;
+  background: radial-gradient(1200px 600px at 50% -20%, rgba(65,105,225,.22), transparent 60%), var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 18px 22px 10px;
+}
+
+.clockBlock{ display:flex; flex-direction:column; gap: 2px; }
+.clock{ font-size: 44px; font-weight: 700; letter-spacing: .5px; }
+.date{ font-size: 18px; color: var(--muted); }
+
+.hint{
+  color: rgba(255,255,255,.55);
+  font-size: 14px;
+  text-align: right;
+  max-width: 45%;
+}
+
+.grid{
+  padding: 12px 18px 18px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.tile{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  color: var(--text);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)), var(--panel);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  min-height: 120px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  user-select:none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tile:active{
+  transform: translateY(1px);
+  border-color: var(--outline);
+}
+
+.tile .label{
+  font-size: 22px;
+  font-weight: 650;
+}
+
+.tile .sub{
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.tile.secondary{
+  background: linear-gradient(180deg, rgba(65,105,225,.22), rgba(65,105,225,.06)), var(--panel2);
+  border-color: var(--outline);
+}
+
+@media (max-width: 900px){
+  .clock{ font-size: 38px; }
+  .tile{ min-height: 105px; }
+}
